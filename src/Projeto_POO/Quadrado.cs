@@ -5,24 +5,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PolyShape {
-    internal class Quadrado {
-    }
+namespace PolyShape
+{
+    internal class Quadrado
+    {
+        private double _lado;
 
-    double area, perimetro;
-
-    public double CalcularArea()
+        public double Area()
         {
+            return _lado * _lado;
 
-            return area * perimetro;
-            
         }
 
-    public double CalcularPerimetro()
+        public double Perimetro()
         {
-            return;
-        }    
-
-
-
+            return 4 * _lado;
+        }
+    }
 }
