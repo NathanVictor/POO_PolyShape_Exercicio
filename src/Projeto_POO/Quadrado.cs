@@ -7,19 +7,13 @@ using System.Threading.Tasks;
 
 namespace PolyShape
 {
-    internal class Quadrado
-    {
-        private double _lado;
-
-        public double Area()
-        {
-            return _lado * _lado;
-
+    internal class Quadrado : Retangulo {
+        public Quadrado(double lado) : base (lado, lado) {
+            // Sobrescreve a descrição gerada pelo pai se preferir, ou ajusta o construtor
         }
 
-        public double Perimetro()
-        {
-            return 4 * _lado;
+        public override string ToString() {
+            return $"Quadrado com área de {Area():F4}";
         }
     }
 }

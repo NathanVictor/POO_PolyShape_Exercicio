@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace PolyShape {
     internal class Forma {
-
         private string _descricao;
 
         public Forma(string descricao) {
             _descricao = descricao;
         }
 
-        public double Area() {
+        // Métodos virtuais para permitir polimorfismo
+        public virtual double Area() {
             return 0;
         }
 
-        public double Perimetro() {
+        public virtual double Perimetro() {
             return 0;
         }
 
@@ -28,7 +28,5 @@ namespace PolyShape {
         public override string ToString() {
             return $"{_descricao} com área de {Area():F4}";
         }
-
     }
-
 }

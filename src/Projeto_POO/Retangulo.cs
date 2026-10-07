@@ -6,20 +6,16 @@ using System.Threading.Tasks;
 
 namespace PolyShape
 {
-    internal class Retangulo
-    {
-        private double _base,_altura;
-
-        public double Area()
-        {
-            return _base * _altura;
-
+    internal class Retangulo : PoligonoReto {
+        public Retangulo(double largura, double altura) : base("Retângulo", largura, altura) {
         }
 
-        public double Perimetro()
-        {
+        public override double Area() {
+            return _base * _altura;
+        }
+
+        public override double Perimetro() {
             return 2 * (_base + _altura);
         }
-
     }
 }
